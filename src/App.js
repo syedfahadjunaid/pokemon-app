@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from 'react';
 import PokemonList from './components/PokemonList';
 import axios from 'axios';
 import Pagination from './components/Pagination';
+import logo from './images/logo.png';
+import logotext from './images/logotext.png';
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
@@ -41,8 +43,23 @@ function App() {
 
   return (
     <div>
-      <h1>POKEMON DATA</h1>
-      <hr />
+      <h1 className="text-center text-4xl font-bold text-green-600">
+        POKEMON DATA
+      </h1>
+      <div className="flex h-[140px] w-full justify-center border-4 border-solid border-rose-600 p-4">
+        <img
+          className="absolute left-2 h-[100px]"
+          src={logotext}
+          alt="pokemon-logo"
+        />
+
+        <img
+          className="absolute right-2 h-[100px]"
+          src={logo}
+          alt="pokemon-logo"
+        />
+      </div>
+
       {loading ? (
         'LOADING...'
       ) : (
