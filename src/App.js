@@ -64,12 +64,12 @@ function App() {
         'LOADING...'
       ) : (
         <div>
-          <PokemonList pokemon={pokemon} />
-          <hr />
           <Pagination
             nextPage={nextPageUrl ? gotoNextPage : null}
             prevPage={prevPageUrl ? gotoPrevPage : null}
           />
+          <PokemonList pokemon={pokemon} />
+          <hr />
         </div>
       )}
     </div>
