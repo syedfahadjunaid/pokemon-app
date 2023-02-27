@@ -9,9 +9,7 @@ function PokemonList({ pokemon }) {
     );
   });
   return (
-    <div className="justify-center border-b-2 border-l-2 border-r-2 border-solid border-rose-600 p-4 text-center">
-      {renderedPokemon}
-    </div>
+    <div className="justify-center p-4 text-center">{renderedPokemon}</div>
   );
 }
 

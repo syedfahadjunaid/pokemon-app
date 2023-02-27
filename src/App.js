@@ -43,21 +43,13 @@ function App() {
 
   return (
     <div>
-      <h1 className="text-center text-4xl font-bold text-green-600">
-        POKEMON DATA
+      <h1 className="m-4 text-center text-4xl font-bold text-green-600">
+        POKEDEX
       </h1>
-      <div className="flex h-[140px] w-full justify-center border-4 border-solid border-rose-600 p-4">
-        <img
-          className="absolute left-2 h-[100px]"
-          src={logotext}
-          alt="pokemon-logo"
-        />
+      <div className="m-4 flex h-[140px] justify-center rounded-2xl border-4 border-solid border-purple-200 bg-purple-200 p-4">
+        <img className="h-[100px]" src={logotext} alt="pokemon-logo" />
 
-        <img
-          className="absolute right-2 h-[100px]"
-          src={logo}
-          alt="pokemon-logo"
-        />
+        <img className="h-[100px]" src={logo} alt="pokemon-logo" />
       </div>
 
       {loading ? (

@@ -1,9 +1,9 @@
 function Pagination({ nextPage, prevPage }) {
   return (
-    <div className="h-[50px] border-b-0 border-l-2 border-r-2 border-solid border-rose-600">
+    <div className="h-[50px]">
       {nextPage && (
         <button
-          className="absolute right-1 h-[45px] w-[100px] bg-blue-200 hover:bg-blue-500 hover:text-white"
+          className="absolute right-0 mr-4 h-[45px] w-[100px] bg-blue-200 hover:bg-blue-500 hover:text-white"
           onClick={nextPage}
         >
           NEXT
@@ -11,7 +11,7 @@ function Pagination({ nextPage, prevPage }) {
       )}
       {prevPage && (
         <button
-          className="absolute left-1 h-[45px] w-[100px] bg-red-200 hover:bg-red-500 hover:text-white"
+          className="absolute left-0 ml-4 h-[45px] w-[100px] bg-red-200 hover:bg-red-500 hover:text-white"
           onClick={prevPage}
         >
           PREVIOUS
