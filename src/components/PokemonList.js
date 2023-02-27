@@ -1,15 +1,20 @@
-function PokemonList({ pokemon }) {
-  const renderedPokemon = pokemon.map((poke, index) => {
+import Link from './Link';
+
+function PokemonList({ pokemon, setPokeUrl }) {
+  const handleClick = (index) => {
+    setPokeUrl(pokemon[index].url);
+    // console.log(index);
+  };
+  const renderedPokemons = pokemon.map((poke, index) => {
     return (
-      <div key={index}>
-        <h1 className="text-center text-lg font-bold text-red-600">
-          {poke.name.toUpperCase()}
-        </h1>
+      <div onClick={() => handleClick(index)} key={index}>
+        <Link to="/pokeinformation">{poke.name.toUpperCase()}</Link>
       </div>
     );
   });
+
   return (
-    <div className="justify-center p-4 text-center">{renderedPokemon}</div>
+    <div className="justify-center p-4 text-center">{renderedPokemons}</div>
   );
 }
 
